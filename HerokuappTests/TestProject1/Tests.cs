@@ -1,3 +1,8 @@
+using System;
+using System.Collections;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -40,21 +45,99 @@ namespace HerokuappTests
             _driver.Url = "http://the-internet.herokuapp.com/checkboxes";
             _driver.Manage().Window.Maximize();
 
-            System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> checkboxes = _driver.FindElements(By.XPath("//input[@type='checkbox']"));
+            var checkboxes = _driver.FindElements(By.XPath("//input[@type='checkbox']"));
 
             var firstCheck = checkboxes[0].GetAttribute("checked");
             Assert.IsNull(firstCheck);
 
             var secondCheck = checkboxes[1].GetAttribute("checked");
-            Assert.NotNull(secondCheck);
+            Assert.IsNotEmpty(secondCheck);
 
             SetAttribute(_js, checkboxes[0], "checked", "true");
             var firstCheckAfterChanged = checkboxes[0].GetAttribute("checked");
-            Assert.NotNull(firstCheckAfterChanged);
+            Assert.IsNotEmpty(firstCheckAfterChanged);
 
             RemoveAttribute(_js, checkboxes[1], "checked");
             var secondCheckAfterChanged = checkboxes[1].GetAttribute("checked");
             Assert.IsNull(secondCheckAfterChanged);
+        }
+
+        [Test]
+        public void Dropdown()
+        {
+            _driver.Url = "http://the-internet.herokuapp.com/dropdown";
+            _driver.Manage().Window.Maximize();
+
+            var dropdown = _driver.FindElement(By.Id("dropdown"));
+            Assert.NotNull(dropdown);
+
+            var options = dropdown.FindElements(By.XPath("//option"));
+            Assert.NotZero(options.Count);
+
+            SetAttribute(_js, options[1], "selected", "selected");
+            var firstSelected = options[1].GetAttribute("selected");
+            bool.TryParse(firstSelected, out var result);
+            Assert.IsTrue(result);
+
+            SetAttribute(_js, options[2], "selected", "selected");
+            var secondSelected = options[2].GetAttribute("selected");
+            bool.TryParse(secondSelected, out var result2);
+            Assert.IsTrue(result2);
+        }
+
+        [Test]
+        public void Inputs()
+        {
+            _driver.Url = "http://the-internet.herokuapp.com/inputs";
+            _driver.Manage().Window.Maximize();
+
+            var number = _driver.FindElement(By.XPath("//input[@type='number']"));
+
+            number.SendKeys(Keys.ArrowUp);
+            number.SendKeys("989");
+
+            // TODO
+        }
+
+        [Test]
+        public void SortableDataTables()
+        {
+            _driver.Url = "http://the-internet.herokuapp.com/tables";
+            _driver.Manage().Window.Maximize();
+
+            var table = _driver.FindElement(By.Id("table1"));
+            var smith = table.FindElement(By.XPath("//tbody//tr[1]/td[1]")).Text;
+            Assert.AreEqual("Smith", smith);
+
+            var email = table.FindElement(By.XPath("//tbody//tr[2]/td[3]")).Text;
+            Assert.AreEqual("fbach@yahoo.com", email);
+        }
+
+        [Test]
+        public async Task Typos()
+        {
+            _driver.Url = "http://the-internet.herokuapp.com/typos";
+            _driver.Manage().Window.Maximize();
+
+            var result = string.Empty;
+
+            var collection = _driver.FindElements(By.XPath("//p"));
+
+            foreach (IWebElement webElement in collection)
+            {
+                var text = webElement.Text.Replace(" ", "+");
+                var requestUrl = $"https://speller.yandex.net/services/spellservice/checkText?text={text}";
+
+                using var client = new HttpClient();
+                var response = await client.GetAsync(requestUrl);
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    result = await response.Content.ReadAsStringAsync();
+                }
+            }
+
+            Console.WriteLine(result.Contains("error") ? "Mistake in text" : "Everything is OK");
         }
 
         [TearDown]
