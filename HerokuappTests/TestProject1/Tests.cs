@@ -151,8 +151,6 @@ namespace HerokuappTests
             _driver.Url = "http://the-internet.herokuapp.com/hovers";
             _driver.Manage().Window.Maximize();
 
-
-
             var errors = new List<string>();
 
             var figures = _driver.FindElements(By.ClassName("figure"));
@@ -174,15 +172,26 @@ namespace HerokuappTests
 
             //Actions action = new Actions(driver);
             //action.MoveToElement(element).Perform();
+        }
 
+        [Test]
+        public void NotificationMessage()
+        {
+            _driver.Url = "http://the-internet.herokuapp.com/notification_message_rendered";
+            _driver.Manage().Window.Maximize();
 
+            _driver.FindElement(By.XPath("//*[text()='Click here']")).Click();
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(3));
+            var isAction = wait.Until(dr => dr.FindElement(By.Id("flash"))).Text.Contains("Action");
+
+            Assert.True(isAction);
         }
 
 
         [TearDown]
         public void CloseBrowser()
         {
-            //_driver.Quit();
+            _driver.Quit();
         }
 
         private void SetAttribute(IJavaScriptExecutor driver, IWebElement element, string attName, string attValue)
