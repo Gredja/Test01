@@ -14,13 +14,14 @@ namespace Locators
         [SetUp]
         public void Setup()
         {
-            _driver = new ChromeDriver("C:\\");
+            _driver = new ChromeDriver();
         }
 
 
         [Test]
         public void Test1()
         {
+            _driver.Url = "http://the-internet.herokuapp.com/add_remove_elements/";
             Assert.Pass();
         }
     }
