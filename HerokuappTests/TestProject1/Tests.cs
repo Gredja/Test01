@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -21,7 +19,7 @@ namespace HerokuappTests
         [SetUp]
         public void Setup()
         {
-            _driver = new ChromeDriver("C:\\");
+            _driver = new ChromeDriver();
             _js = (IJavaScriptExecutor)_driver;
             _mouseAction = new Actions(_driver);
         }
@@ -146,35 +144,6 @@ namespace HerokuappTests
         }
 
         [Test]
-        public async Task Hovers()
-        {
-            _driver.Url = "http://the-internet.herokuapp.com/hovers";
-            _driver.Manage().Window.Maximize();
-
-            var errors = new List<string>();
-
-            var figures = _driver.FindElements(By.ClassName("figure"));
-
-            foreach (var figure in figures)
-            {
-                _mouseAction.MoveToElement(figure);
-                var figcaption = figure.FindElement(By.ClassName("figcaption"));
-
-                var name = figcaption.FindElement(By.XPath("//h5")).Text;
-
-                TestContext.WriteLine(name);
-            }
-
-            //// this makes sure the element is visible before you try to do anything
-            //// for slow loading pages
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            //var element = wait.Until(ExpectedConditions.ElementIsVisible(By.Id(elementId)));
-
-            //Actions action = new Actions(driver);
-            //action.MoveToElement(element).Perform();
-        }
-
-        [Test]
         public void NotificationMessage()
         {
             _driver.Url = "http://the-internet.herokuapp.com/notification_message_rendered";
@@ -186,7 +155,6 @@ namespace HerokuappTests
 
             Assert.True(isAction);
         }
-
 
         [TearDown]
         public void CloseBrowser()
