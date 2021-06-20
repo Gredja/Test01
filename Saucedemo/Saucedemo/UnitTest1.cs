@@ -18,18 +18,17 @@ namespace Saucedemo
         [Test]
         public void CheckCart()
         {
-            
             var homePage = new LoginPage(_driver).LoginSuccess();
+            var cartPage = homePage?.BuyProduct();
+            var result = cartPage.CheckPrice();
 
-            homePage?.BuyProduct();
-
-
+            Assert.IsTrue(result);
         }
 
         [TearDown]
         public void Close()
         {
-           // _driver?.Close();
+            _driver?.Close();
         }
     }
 }
