@@ -13,6 +13,7 @@
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="91.0.4472.10100" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
     <PackageReference Include="Yandex.Speller.Api" Version="1.0.5650.35359" />
   </ItemGroup>
 

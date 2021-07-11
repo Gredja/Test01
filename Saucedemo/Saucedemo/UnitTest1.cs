@@ -5,11 +5,12 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Saucedemo.PageObjects;
+using Saucedemo.PageObjects.Base;
 
 namespace Saucedemo
 {
     [TestFixture]
-    public class Tests
+    public class Tests : BaseTest
     {
         private static IWebDriver _driver;
         private static readonly By _allProducts = By.CssSelector(".inventory_item");
