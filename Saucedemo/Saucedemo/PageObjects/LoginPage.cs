@@ -17,7 +17,7 @@ namespace Saucedemo.PageObjects
         {
             _driver.Url = "https://www.saucedemo.com/";
 
-           var userNameInput = _driver.FindElement(By.CssSelector("input[data-test='username']"));
+            var userNameInput = _driver.FindElement(By.CssSelector("input[data-test='username']"));
             userNameInput.Click();
             userNameInput.SendKeys(login);
 

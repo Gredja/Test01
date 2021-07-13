@@ -1,27 +1,52 @@
-using NUnit.Framework.Interfaces;
+using System;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.Events;
+using Serilog;
 
 namespace Saucedemo.PageObjects.Base
 {
-    public class BaseTest : ITestListener
+    public class BaseTest
     {
-        public void TestStarted(ITest test)
+        protected readonly ILogger _logger;
+        protected static IWebDriver _driver;
+        protected EventFiringWebDriver _eventDriver;
+
+        public BaseTest()
         {
-            throw new System.NotImplementedException();
+            _logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo
+                .File(@"C:\log\log.txt", rollingInterval: RollingInterval.Day).CreateLogger();
         }
 
-        public void TestFinished(ITestResult result)
+        [SetUp]
+        public void Setup()
         {
-            throw new System.NotImplementedException();
+            _driver = new ChromeDriver();
+
+            _eventDriver = new EventFiringWebDriver(_driver);
+            _eventDriver.ElementClicked += firingDriver_ElementClicked;
+            _eventDriver.FindElementCompleted += firingDriver_FindElementCompleted;
+            _eventDriver.ExceptionThrown += _eventDriver_ExceptionThrown;
+            _driver = _eventDriver;
+
+            _driver.Manage().Window.Maximize();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
         }
 
-        public void TestOutput(TestOutput output)
+        private void _eventDriver_ExceptionThrown(object sender, WebDriverExceptionEventArgs e)
         {
-            throw new System.NotImplementedException();
+            _logger.Error($"Source: {e.ThrownException.Source}, message: {e.ThrownException.Message}");
         }
 
-        public void SendMessage(TestMessage message)
+        private void firingDriver_FindElementCompleted(object? sender, FindElementEventArgs e)
         {
-            throw new System.NotImplementedException();
+           _logger.Debug($"Driver {e.Driver}. {e.Element} in {e.FindMethod} was found");
+        }
+
+        private void firingDriver_ElementClicked(object? sender, WebElementEventArgs e)
+        {
+            _logger.Debug($"Driver {e.Driver}. {e.Element} was clicked");
         }
     }
 }
