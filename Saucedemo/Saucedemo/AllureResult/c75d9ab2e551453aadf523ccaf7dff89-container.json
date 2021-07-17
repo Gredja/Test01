@@ -1,0 +1,44 @@
+{
+  "uuid": "ae7bb2bc-087f-4015-9d30-ed15d75ea061-tc-0-1000",
+  "name": "Saucedemo.Tests.Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")",
+  "children": [
+    "7a44dac4-63fc-4022-bcfa-d433701dce45-tr-0-1013"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523889606,
+      "stop": 1626523889606
+    }
+  ],
+  "afters": [
+    {
+      "name": "Close",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523889606,
+      "stop": 1626523889606
+    }
+  ],
+  "links": [],
+  "start": 1626523875930,
+  "stop": 1626523889608
+}

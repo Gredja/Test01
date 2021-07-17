@@ -1,0 +1,86 @@
+{
+  "uuid": "25eec7f5-d22f-4438-8c51-5d3710eb0f3d-tr-0-1012",
+  "historyId": "Saucedemo.Tests.Test_RightSort(\"problem_user\",\"secret_sauce\",\"lohi\")",
+  "fullName": "Saucedemo.Tests.Test_RightSort(\"problem_user\",\"secret_sauce\",\"lohi\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-1IQ1N3A"
+    },
+    {
+      "name": "testClass",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test_RightSort"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "tag",
+      "value": "CI"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    }
+  ],
+  "links": [],
+  "name": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"lohi\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"lohi\")"
+  },
+  "stage": "finished",
+  "description": "Test_RightSort\n",
+  "steps": [
+    {
+      "name": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"lohi\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fb7b3f2dbe944e6487d7ed50f4d8c957-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1626523872512,
+      "stop": 1626523875928
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "problem_user"
+    },
+    {
+      "name": "Param #1",
+      "value": "secret_sauce"
+    },
+    {
+      "name": "Param #2",
+      "value": "lohi"
+    }
+  ],
+  "start": 1626523872512,
+  "stop": 1626523875928
+}
