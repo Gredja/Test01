@@ -1,0 +1,81 @@
+{
+  "uuid": "9c825069-ef13-47c7-ac72-d52e92b24952-tr-0-1023",
+  "historyId": "Saucedemo.Tests.Test_ProductDescriptionTyposCheck(6)",
+  "fullName": "Saucedemo.Tests.Test_ProductDescriptionTyposCheck(6)",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-1IQ1N3A"
+    },
+    {
+      "name": "testClass",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test_ProductDescriptionTyposCheck"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "tag",
+      "value": "CI"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Test_ProductDescriptionTyposCheck(6)",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at Saucedemo.Tests.Test_ProductDescriptionTyposCheck(Int32 number) in D:\\Work\\QA\\Test01\\Saucedemo\\Saucedemo\\UnitTest1.cs:line 52\r\n"
+  },
+  "stage": "finished",
+  "description": "Test_ProductDescriptionTyposCheck\n",
+  "steps": [
+    {
+      "name": "Test_ProductDescriptionTyposCheck(6)",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at Saucedemo.Tests.Test_ProductDescriptionTyposCheck(Int32 number) in D:\\Work\\QA\\Test01\\Saucedemo\\Saucedemo\\UnitTest1.cs:line 52\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ff197926070246c7879972488ed7a496-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1626523822148,
+      "stop": 1626523827379
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "6"
+    }
+  ],
+  "start": 1626523822148,
+  "stop": 1626523827379
+}

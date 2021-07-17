@@ -1,0 +1,86 @@
+{
+  "uuid": "5c817997-6ea3-4cf5-929b-5d8d068f3eb9-tr-0-1009",
+  "historyId": "Saucedemo.Tests.Test_RightSort(\"problem_user\",\"secret_sauce\",\"za\")",
+  "fullName": "Saucedemo.Tests.Test_RightSort(\"problem_user\",\"secret_sauce\",\"za\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-1IQ1N3A"
+    },
+    {
+      "name": "testClass",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test_RightSort"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "tag",
+      "value": "CI"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    }
+  ],
+  "links": [],
+  "name": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"za\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"za\")"
+  },
+  "stage": "finished",
+  "description": "Test_RightSort\n",
+  "steps": [
+    {
+      "name": "Test_RightSort(\"problem_user\",\"secret_sauce\",\"za\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d0b3df88291d4531875b63866f297a63-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1626523849302,
+      "stop": 1626523853074
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "problem_user"
+    },
+    {
+      "name": "Param #1",
+      "value": "secret_sauce"
+    },
+    {
+      "name": "Param #2",
+      "value": "za"
+    }
+  ],
+  "start": 1626523849302,
+  "stop": 1626523853074
+}

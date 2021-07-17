@@ -1,0 +1,44 @@
+{
+  "uuid": "82a9920b-d62b-4f24-98df-72dd4a005881-tc-0-1000",
+  "name": "Saucedemo.Tests.Test_RightSort(\"problem_user\",\"secret_sauce\",\"az\")",
+  "children": [
+    "edc8fb59-eef8-46a6-a6f0-3e48572c5bd3-tr-0-1006"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523836490,
+      "stop": 1626523836490
+    }
+  ],
+  "afters": [
+    {
+      "name": "Close",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523836490,
+      "stop": 1626523836490
+    }
+  ],
+  "links": [],
+  "start": 1626523832973,
+  "stop": 1626523836492
+}

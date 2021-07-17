@@ -1,0 +1,86 @@
+{
+  "uuid": "7a44dac4-63fc-4022-bcfa-d433701dce45-tr-0-1013",
+  "historyId": "Saucedemo.Tests.Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")",
+  "fullName": "Saucedemo.Tests.Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-1IQ1N3A"
+    },
+    {
+      "name": "testClass",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test_RightSort"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "tag",
+      "value": "CI"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    }
+  ],
+  "links": [],
+  "name": "Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")"
+  },
+  "stage": "finished",
+  "description": "Test_RightSort\n",
+  "steps": [
+    {
+      "name": "Test_RightSort(\"performance_glitch_user\",\"secret_sauce\",\"lohi\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "24a3b6f7dd2249e694c27adbcf0fbbbb-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1626523875930,
+      "stop": 1626523889607
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "performance_glitch_user"
+    },
+    {
+      "name": "Param #1",
+      "value": "secret_sauce"
+    },
+    {
+      "name": "Param #2",
+      "value": "lohi"
+    }
+  ],
+  "start": 1626523875930,
+  "stop": 1626523889607
+}

@@ -1,0 +1,44 @@
+{
+  "uuid": "3dded31b-87dc-45ea-9291-6d1ea9f5e105-tc-0-1000",
+  "name": "Saucedemo.Tests.Test_ProductDescriptionTyposCheck(4)",
+  "children": [
+    "4fe6455f-ce88-4981-8b95-d388e27bcf95-tr-0-1021"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523816003,
+      "stop": 1626523816003
+    }
+  ],
+  "afters": [
+    {
+      "name": "Close",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523816003,
+      "stop": 1626523816003
+    }
+  ],
+  "links": [],
+  "start": 1626523808383,
+  "stop": 1626523816006
+}

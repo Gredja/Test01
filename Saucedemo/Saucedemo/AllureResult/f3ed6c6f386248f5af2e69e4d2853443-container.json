@@ -1,0 +1,44 @@
+{
+  "uuid": "57901736-b1a2-414d-8992-392ae038087e-tc-0-1000",
+  "name": "Saucedemo.Tests.Test_CheckCart_SameProductsInCart(\"problem_user\",\"secret_sauce\")",
+  "children": [
+    "5b0b2c10-b71a-4e77-85b9-ad5e4bd049c2-tr-0-1002"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523788426,
+      "stop": 1626523788426
+    }
+  ],
+  "afters": [
+    {
+      "name": "Close",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1626523788426,
+      "stop": 1626523788426
+    }
+  ],
+  "links": [],
+  "start": 1626523784952,
+  "stop": 1626523788429
+}

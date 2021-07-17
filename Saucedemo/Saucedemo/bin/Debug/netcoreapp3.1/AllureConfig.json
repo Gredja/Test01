@@ -1,0 +1,11 @@
+{
+  "allure": {
+    "title": "Saucedemo",
+    "directory": "d:\\Work\\QA\\Test01\\Saucedemo\\Saucedemo\\AllureResult"
+  },
+  "specflow": {
+    "stepArguments": {
+      "convertToParameters": "true"
+    }
+  }
+}
