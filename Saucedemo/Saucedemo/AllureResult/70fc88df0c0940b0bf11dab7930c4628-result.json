@@ -1,0 +1,82 @@
+{
+  "uuid": "65658990-014c-4496-82a4-2bcca999a6c0-tr-0-1001",
+  "historyId": "Saucedemo.Tests.Test_CheckCart_SameProductsInCart(\"standard_user\",\"secret_sauce\")",
+  "fullName": "Saucedemo.Tests.Test_CheckCart_SameProductsInCart(\"standard_user\",\"secret_sauce\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-1IQ1N3A"
+    },
+    {
+      "name": "testClass",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test_CheckCart_SameProductsInCart"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests"
+    },
+    {
+      "name": "tag",
+      "value": "CI"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [],
+  "name": "Test_CheckCart_SameProductsInCart(\"standard_user\",\"secret_sauce\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test_CheckCart_SameProductsInCart(\"standard_user\",\"secret_sauce\")"
+  },
+  "stage": "finished",
+  "description": "Test_CheckCart_SameProductsInCart\n",
+  "steps": [
+    {
+      "name": "Test_CheckCart_SameProductsInCart(\"standard_user\",\"secret_sauce\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "8abd3ea2db5d4ee089d4a148d7d6972c-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1626523779308,
+      "stop": 1626523784892
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "standard_user"
+    },
+    {
+      "name": "Param #1",
+      "value": "secret_sauce"
+    }
+  ],
+  "start": 1626523779307,
+  "stop": 1626523784902
+}
